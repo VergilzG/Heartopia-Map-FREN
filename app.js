@@ -1,100 +1,7 @@
-// --- CONFIGURATION API & DISCORD ---
-const COUNT_API_NAMESPACE = 'maptopia_heartopia_fr_v1';
-const COUNT_API_KEY = 'likes';
-const COUNT_API_URL_GET = `https://api.counterapi.dev/v1/${COUNT_API_NAMESPACE}/${COUNT_API_KEY}/up`;
-const COUNT_API_URL_READ = `https://api.counterapi.dev/v1/${COUNT_API_NAMESPACE}/${COUNT_API_KEY}/`;
-const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1453916227893334130/_yGCAjF1nsfVQwq3C1M4lWs8STwa26zdusGW__nIeQIEl-TJehlQaf7kvEJJFdoLh1y6";
-
 // Récupération sécurisée des textes (Fallback anglais/défaut si manquant)
 function getTxt(path, defaultTxt) {
     if (typeof TEXTS === 'undefined') return defaultTxt;
     return path.split('.').reduce((o, i) => (o ? o[i] : undefined), TEXTS) || defaultTxt;
-}
-
-// --- GESTION DES LIKES ---
-function initLikeSystem() {
-    const likeBtn = document.getElementById('like-btn-internal');
-    const likeCountSpan = document.getElementById('like-count-internal');
-   
-    fetch(COUNT_API_URL_READ)
-        .then(res => res.json())
-        .then(data => { likeCountSpan.innerText = data.count || 842; })
-        .catch(() => { likeCountSpan.innerText = "842"; });
-    
-    const isLiked = localStorage.getItem('maptopia_user_liked') === 'true';
-    if(isLiked) { lockLikeButton(likeBtn); }
-
-    window.toggleLikeInternal = function() {
-        if (likeBtn.classList.contains('liked')) return;
-        lockLikeButton(likeBtn);
-        localStorage.setItem('maptopia_user_liked', 'true');
-
-        fetch(COUNT_API_URL_GET)
-            .then(res => res.json())
-            .then(data => { likeCountSpan.innerText = data.count; });
-
-        sendLikeToDiscord();
-    };
-}
-
-function lockLikeButton(btn) {
-    btn.classList.add('liked');
-    btn.innerHTML = `<span class="heart-icon-anim">❤</span> ${getTxt('like.thankyou', 'MERCI !')}`;
-    btn.title = getTxt('like.already', "Vous avez déjà voté !");
-    btn.style.cursor = "default";
-}
-
-function sendLikeToDiscord() {
-    const payload = { username: "Maptopia Votes", content: "❤️ **Un utilisateur vient d'aimer la carte !**" };
-    fetch(DISCORD_WEBHOOK_URL, {
-        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload)
-    }).catch(console.error);
-}
-
-// --- GESTION DU CHAT / CONTACT ---
-function toggleChat() {
-    const box = document.getElementById('simple-chat-box');
-    box.style.display = (box.style.display === 'flex') ? 'none' : 'flex';
-}
-
-function sendToDiscord() {
-    const name = document.getElementById('user-name').value.trim();
-    const msg = document.getElementById('user-msg').value.trim();
-    const status = document.getElementById('chat-status');
-    const userLang = navigator.language || navigator.userLanguage;
-
-    if(name === "" || msg === "") {
-        status.innerText = getTxt('chat.incomplete', "⚠️ Veuillez remplir tous les champs.");
-        status.style.color = "#ff5555";
-        return;
-    }
-
-    status.innerText = getTxt('chat.wait', "Envoi en cours...");
-    status.style.color = "#aaa";
-    
-    const payload = {
-        username: "Maptopia Contact",
-        content: `**Nouveau message reçu !**\n👤 **De:** ${name}\n🌍 **Langue détectée:** ${userLang}\n💬 **Message:**\n${msg}`
-    };
-    fetch(DISCORD_WEBHOOK_URL, {
-        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload)
-    })
-    .then(response => {
-        if(response.ok) {
-            status.innerText = getTxt('chat.success', "✅ Message envoyé avec succès !");
-            status.style.color = "#55ff55";
-            document.getElementById('user-msg').value = "";
-            setTimeout(() => { toggleChat(); status.innerText = ""; }, 2000);
-        } else {
-            status.innerText = getTxt('chat.error', "❌ Erreur lors de l'envoi.");
-            status.style.color = "#ff5555";
-        }
-    })
-    .catch(err => {
-         console.error(err);
-        status.innerText = "❌ Erreur de connexion.";
-        status.style.color = "#ff5555";
-    });
 }
 
 // --- NAVIGATION & UI ---
@@ -108,14 +15,36 @@ function toggleMobileLegend() {
     legend.classList.toggle('mobile-visible');
     if(legend.classList.contains('mobile-visible')) document.getElementById('main-menu').classList.remove('mobile-visible');
 }
-function startExperience() {
-    document.getElementById('main-audio').play().catch(() => {});
-    document.getElementById('intro-screen').style.opacity = '0';
-    document.getElementById('map').style.opacity = '1';
-    setTimeout(() => {
-        document.getElementById('intro-screen').style.display = 'none';
-        document.getElementById('welcome-modal').style.display = 'flex';
-    }, 800);
+
+let mapInstance;
+
+function initMap() {
+    if (mapInstance) return;
+
+    mapInstance = L.map('map').setView([0, 0], 4);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapInstance);
+}
+
+
+function startExperience() { 
+    // Audio
+    const audio = document.getElementById('main-audio');
+    if (audio) {
+        audio.play().catch(() => {});
+    }
+
+    // Map visible
+    const map = document.getElementById('map');
+    if (map) {
+        map.style.display = 'block';
+        map.style.opacity = '1';
+    }
+
+    // Welcome modal optionnel
+    const modal = document.getElementById('welcome-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
 }
 function closeWelcome() { document.getElementById('welcome-modal').style.display = 'none'; }
 
@@ -428,42 +357,10 @@ function openOverlay(name, img_loc, img_weather, img_time) {
     document.getElementById('overlay-info').style.display = 'flex';
 }
 
-// --- LOGIQUE QUIZ ---
-let currentQ = 0;
-function openQuiz() {
-    // Utilise la variable QUIZ_DATA définie dans data-fr.js
-    if(typeof QUIZ_DATA === 'undefined') return;
-    currentQ = 0;
-    document.getElementById('quiz-container').style.display = 'block';
-    showQuestion();
-}
-function closeQuiz() { document.getElementById('quiz-container').style.display = 'none'; }
-function showQuestion() {
-    let q = QUIZ_DATA[currentQ];
-    document.getElementById('quiz-question').innerText = `Question ${currentQ + 1}/30 : ${q.q}`;
-    let optContainer = document.getElementById('quiz-options');
-    optContainer.innerHTML = "";
-    document.getElementById('quiz-feedback').innerText = "";
-    q.o.forEach((opt, i) => {
-        let btn = document.createElement('div'); btn.className = 'quiz-option'; btn.innerText = opt;
-        btn.onclick = () => {
-            if(i === q.a) {
-                document.getElementById('quiz-feedback').innerText = getTxt('quiz.success', "✅ BRAVO !");
-                document.getElementById('quiz-feedback').style.color = "green";
-                setTimeout(() => { currentQ++; if(currentQ < 30) showQuestion(); else finishQuiz(); }, 1000);
-            } else {
-                document.getElementById('quiz-feedback').innerText = getTxt('quiz.error', "❌ ERREUR !");
-                document.getElementById('quiz-feedback').style.color = "red";
-            }
-        };
-        optContainer.appendChild(btn);
-    });
-}
-function finishQuiz() {
-    document.getElementById('quiz-question').innerText = getTxt('quiz.finishTitle', "🏆 EXPERT CONFIRMÉ !");
-    document.getElementById('quiz-options').innerHTML = `<p>${getTxt('quiz.finishText', "Félicitations !")}</p>`;
-    document.getElementById('quiz-feedback').innerText = "";
-}
+document.addEventListener("DOMContentLoaded", () => {
+    startExperience();
+});
 
 // LANCEMENT
 loadExternalData();
+
