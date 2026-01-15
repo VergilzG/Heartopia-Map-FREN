@@ -110,7 +110,6 @@ const resourcesData = {
     "Big Tree": { icon: "resource/grand arbre.png", positions: [[-612, 424.5], [-641.8, 369], [-351, 329.5], [-414.3, 337.1], [-396.3, 608.9], [-376.3, 624], [-616, 593.6], [-672.3, 642]] },
     "Slippery Oak Wood": { icon: "resource/bois de chaine glissant.png", positions: [[-532, 787.3]] },
     "Stone": { icon: "resource/pierre.png", positions: [[-615.9, 316], [-641.5, 278.8], [-558.4, 257.4], [-535, 292], [-499.5, 241.1], [-466.8, 283.1], [-407.1, 244.1], [-284, 402.8], [-254.6, 367.9], [-309.4, 479.1], [-263, 466.6], [-289.1, 544.6], [-315.5, 567.9], [-298.6, 625.4], [-391.3, 726.9], [-443.6, 697], [-468.6, 733.8], [-519, 714.9], [-564.9, 732.8], [-605.1, 680.3], [-673.9, 684.1]] },
-    "Fluorite": { icon: "resource/fluorite.png", positions: [[-417.8, 313.8]] },
     "Orange": { icon: "resource/orange.png", positions: [[-650.1, 370.9], [-639.5, 372], [-607.3, 351.4], [-602.9, 343.5], [-588.6, 336.6], [-559.6, 329.5], [-542.1, 324.8], [-515, 319.5], [-470.5, 321], [-461.4, 271.5], [-410.8, 314], [-397.3, 310.1], [-310.9, 339.3], [-327.6, 373.9], [-324.9, 391.9], [-295.4, 411.1], [-330.4, 420.9], [-333.8, 452.9]] },
     "Porcini Mushroom": { icon: "resource/cépes de bordeaux.png", positions: [[-615, 796.9], [-620, 778.1], [-610.6, 759.9], [-634.9, 745.5], [-650, 773.5], [-639, 800.6], [-543.5, 776.3], [-523.6, 777], [-524.3, 818.9], [-479.9, 780.8], [-464.3, 775.6], [-472.1, 801], [-477.3, 825.8], [-438.4, 789.3], [-410.5, 776.8], [-404.1, 794.1], [-415.8, 799.1]] },
     "Black Truffle": { icon: "resource/truffes noires.png", positions: [[-358.1, 911.1], [-357.4, 926.1], [-340.4, 913.6], [-325.8, 920], [-342.1, 956.5], [-363.3, 961.8]] },
@@ -281,4 +280,5 @@ const birdList = [
     {name:"Spotted Dove", bg:"condition/tourterelle_tigrine_lieu.png", cond:"condition/tourterelle_tigrine_meteo.png", heure:"condition/tourterelle_tigrine_heure.png"},
     {name:"Wren", bg:"condition/troglodyte_lieu.png", cond:"condition/troglodyte_meteo.png", heure:"condition/troglodyte_heure.png"}
 ];
+
 
