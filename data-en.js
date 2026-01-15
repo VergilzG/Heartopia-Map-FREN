@@ -282,36 +282,3 @@ const birdList = [
     {name:"Wren", bg:"condition/troglodyte_lieu.png", cond:"condition/troglodyte_meteo.png", heure:"condition/troglodyte_heure.png"}
 ];
 
-// 11. QUIZ (English Questions)
-const QUIZ_DATA = [
-    { q: "Who is the village guide?", o: ["Albert Jr.", "Barnabé", "Eric"], a: 0 },
-    { q: "Where can you find the Acantharchus pomotis?", o: ["Calm Sea", "Forest Lake", "Aurora River"], a: 0 },
-    { q: "Which NPC manages discoveries?", o: ["The Collector", "Bob", "Massimo"], a: 0 },
-    { q: "What weather creates a rainbow?", o: ["Storm", "Fog", "Sun after rain"], a: 2 },
-    { q: "Where is the Fishing Village located?", o: ["North-East", "South-West", "East"], a: 1 },
-    { q: "The Actias neidhoederi is:", o: ["Morning", "Diurnal (Day)", "Nocturnal (Night)"], a: 2 },
-    { q: "Where does the Capybara live?", o: ["The Ruins", "Diving Board", "Beach"], a: 0 },
-    { q: "Who sells animals (dogs)?", o: ["Vernie", "Joan", "Andrew"], a: 1 },
-    { q: "Where can you catch the Oarfish?", o: ["Rivers", "Lakes", "Ocean"], a: 2 },
-    { q: "Where is the thermal area?", o: ["North", "South", "West"], a: 0 },
-    { q: "The Unicorn Beetle lives in:", o: ["Oriental Dock", "Fields", "Forest"], a: 0 },
-    { q: "The Indigo Macaw is a:", o: ["Fish", "Bug", "Bird"], a: 2 },
-    { q: "The Butterfly Carp lives in:", o: ["Fresh water", "Salt water", "Meadow Lake"], a: 2 },
-    { q: "Where is the NPC Will located?", o: ["Near the sea", "In the mountains", "In the forest"], a: 0 },
-    { q: "Color of the FISH button?", o: ["Green", "Blue", "Orange"], a: 1 },
-    { q: "The Bumblebee lives in:", o: ["Lakes", "Flower Fields", "Caves"], a: 1 },
-    { q: "The Otter is found at:", o: ["Lighthouse", "Fishing Village", "Ruins"], a: 1 },
-    { q: "The Panda lives near:", o: ["Diving Board", "Village", "Dock"], a: 0 },
-    { q: "The Smelt lives in:", o: ["Meadow Lake", "Upper Lake", "Ocean"], a: 0 },
-    { q: "Annie is located at:", o: ["Central Plaza", "Beach", "Forest"], a: 0 },
-    { q: "The Llama lives at:", o: ["Purple Beach", "Mountain", "River"], a: 0 },
-    { q: "Rate out of 20 for the map?", o: ["5", "0", "20"], a: 2 },
-    { q: "The Blue Noble Crayfish lives in:", o: ["Forest Lake", "Ocean", "Calm Sea"], a: 0 },
-    { q: "Whale Mountain is to the:", o: ["South", "North", "West"], a: 2 },
-    { q: "Maptopia is used to:", o: ["Sell items", "Locate resources", "Replace the game"], a: 1 },
-    { q: "The White Wagtail is a:", o: ["Bird", "Fish", "Resident"], a: 1 },
-    { q: "The Deer lives in:", o: ["Beach", "Oak Forest", "Town"], a: 1 },
-    { q: "The Gonepteryx aspasia is a:", o: ["Fruit", "Bug", "Fish"], a: 1 },
-    { q: "The Oriental Dock is to the:", o: ["North", "East", "South"], a: 1 },
-    { q: "Bob is a:", o: ["Animal", "NPC", "Place"], a: 1 }
-];
