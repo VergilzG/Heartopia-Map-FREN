@@ -323,37 +323,3 @@ const birdList = [
     {name:"Tourterelle tigrine", bg:"condition/tourterelle_tigrine_lieu.png", cond:"condition/tourterelle_tigrine_meteo.png", heure:"condition/tourterelle_tigrine_heure.png"},
     {name:"Troglodyte", bg:"condition/troglodyte_lieu.png", cond:"condition/troglodyte_meteo.png", heure:"condition/troglodyte_heure.png"}
 ];
-
-// 11. QUIZ (Renommé QUIZ_DATA pour être cohérent avec app.js)
-const QUIZ_DATA = [
-    { q: "Qui est le guide du village ?", o: ["Albert Jr.", "Barnabé", "Eric"], a: 0 },
-    { q: "Où trouve-t-on l'Acantharchus pomotis ?", o: ["Mer Calme", "Lac de la Forêt", "Rivière Aurore"], a: 0 },
-    { q: "Quel PNJ gère les trouvailles ?", o: ["Le Collectionneur", "Bob", "Massimo"], a: 0 },
-    { q: "Quelle météo crée l'arc-en-ciel ?", o: ["Orage", "Brume", "Soleil après pluie"], a: 2 },
-    { q: "Où est le Village Pêcheurs ?", o: ["Nord-Est", "Sud-Ouest", "Est"], a: 1 },
-    { q: "L'Actias neidhoederi est :", o: ["Matinal", "Diurne", "Nocturne"], a: 2 },
-    { q: "Où vit le Capybara ?", o: ["Les Ruines", "Le Plongeoir", "La Plage"], a: 0 },
-    { q: "Qui vend les animaux (chiens) ?", o: ["Vernie", "Joan", "Andrew"], a: 1 },
-    { q: "Où pêcher le Régalec ?", o: ["Rivières", "Lacs", "Océan"], a: 2 },
-    { q: "Où est la zone thermale ?", o: ["Au Nord", "Au Sud", "À l'Ouest"], a: 0 },
-    { q: "Le Scarabée licorne vit :", o: ["Quai Oriental", "Champs", "Forêt"], a: 0 },
-    { q: "L'Ara indigo est un :", o: ["Poisson", "Insecte", "Oiseau"], a: 2 },
-    { q: "La Carpe Papillon vit :", o: ["Eau douce", "Eau salée", "Lac Prairie"], a: 2 },
-    { q: "Où se trouve le PNJ Will ?", o: ["Près de la mer", "En montagne", "En forêt"], a: 0 },
-    { q: "Couleur du bouton POISSONS ?", o: ["Vert", "Bleu", "Orange"], a: 1 },
-    { q: "Le Bourdon vit :", o: ["Lacs", "Champs de fleurs", "Grottes"], a: 1 },
-    { q: "La Loutre se trouve :", o: ["Phare", "Village Pêcheurs", "Ruines"], a: 1 },
-    { q: "Le Panda vit près de :", o: ["Plongeoir", "Village", "Quai"], a: 0 },
-    { q: "L'Éperlan vit :", o: ["Lac Prairie", "Haut Lac", "Océan"], a: 0 },
-    { q: "Annie se trouve :", o: ["Place Centrale", "Plage", "Forêt"], a: 0 },
-    { q: "Le Lama vit :", o: ["Plage Violette", "Montagne", "Rivière"], a: 0 },
-    { q: "Note sur 20 pour la carte ?", o: ["5", "0", "20"], a: 2 },
-    { q: "L'Écrevisse bleue vit :", o: ["Lac Forêt", "Océan", "Mer Calme"], a: 0 },
-    { q: "La Montagne Baleine est au :", o: ["Sud", "Nord", "Ouest"], a: 2 },
-    { q: "Maptopia sert à :", o: ["Vendre des items", "Localiser les ressources", "Remplacer le jeu"], a: 1 },
-    { q: "La Bergeronnette est un :", o: ["Oiseau", "Poisson", "Habitant"], a: 1 },
-    { q: "Le Cerf vit :", o: ["Plage", "Forêt Chênes", "Ville"], a: 1 },
-    { q: "Le Citron aspasia est un :", o: ["Fruit", "Insecte", "Poisson"], a: 1 },
-    { q: "Le Quai Oriental est au :", o: ["Nord", "Est", "Sud"], a: 1 },
-    { q: "Bob est un :", o: ["Animal", "PNJ", "Lieu"], a: 1 }
-];
