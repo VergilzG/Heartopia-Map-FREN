@@ -14,3 +14,6 @@ Carte anglaise et française :
   - des fonctions additionnels : Discord / Chat / Likes / IA REX
  
 Le crédit en fin de page a été gardée.
+
+Roadmap : 
+- Ajout des événements et des horaires des invitations de PNJ
