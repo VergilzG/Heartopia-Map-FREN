@@ -38,6 +38,7 @@ const PNJ_DATA = [
     [-499.8, 499.0, "Annie", "pnj/annie.png"],
     [-532.4, 634.8, "Albert Jr.", "pnj/albert jr.png"],
     [-734.8, 445.8, "Bill", "pnj/bill.png"]
+	[-509.4, 414, "Doris (pluie)", "pnj/doris.png"]
 ];
 
 // 3. BUS
@@ -178,6 +179,7 @@ const fishList = [
     {name:"Chabot", bg:"condition/chabot_lieu.png", cond:"condition/chabot_meteo.png", heure:"condition/chabot_heure.png"},
     {name:"Chimère argentée", bg:"condition/chimere_argentee_lieu.png", cond:"condition/chimere_argentee_meteo.png", heure:"condition/chimere_argentee_heure.png"},
     {name:"Comète", bg:"condition/comete_coussut_lieu.png", cond:"condition/comete_coussut_meteo.png", heure:"condition/comete_coussut_heure.png"},
+    {name:"Comète coussut", bg:"condition/comete_coussut_lieu.png", cond:"condition/comete_coussut_meteo.png", heure:"condition/comete_coussut_heure.png"},
     {name:"Crabe de ruisseau", bg:"condition/crabe_de_ruisseau_lieu.png", cond:"condition/crabe_de_ruisseau_meteo.png", heure:"condition/crabe_de_ruisseau_heure.png"},
     {name:"Crevette de la mer", bg:"condition/crevette_de_la_mer_lieu.png", cond:"condition/crevette_de_la_mer_meteo.png", heure:"condition/crevette_de_la_mer_heure.png"},
     {name:"Crevette verte", bg:"condition/crevette_verte_lieu.png", cond:"condition/crevette_verte_meteo.png", heure:"condition/crevette_verte_heure.png"},
@@ -234,30 +236,46 @@ const fishList = [
 
 // 9. INSECTES
 const bugList = [
+    {name:"Abeille à queue blanche", bg:"condition/abeille_a_queue_blanche_lieu.png", cond:"condition/abeille_a_queue_blanche_meteo.png", heure:"condition/abeille_a_queue_blanche_heure.png"},
+    {name:"Abeille charpentière bleue", bg:"condition/Abeille_charpentière_bleue_lieu.png", cond:"condition/Abeille_charpentière_bleue_meteo.png", heure:"condition/Abeille_charpentière_bleue_heure.png"},
+    {name:"Abeille charpentière violette", bg:"condition/abeille_charpentiere_violette_lieu.png", cond:"condition/abeille_charpentiere_violette_meteo.png", heure:"condition/abeille_charpentiere_violette_heure.png"},
     {name:"Actias neidhoederi", bg:"condition/actias_neidhoederi_lieu.png", cond:"condition/actias_neidhoederi_meteo.png", heure:"condition/actias_neidhoederi_heure.png"},
     {name:"Azuré des nerpruns", bg:"condition/azure_de_porcelaine_lieu.png", cond:"condition/azure_de_porcelaine_meteo.png", heure:"condition/azure_de_porcelaine_heure.png"},
     {name:"Bourdon", bg:"condition/bourdon_lieu.png", cond:"condition/bourdon_meteo.png", heure:"condition/bourdon_heure.png"},
+    {name:"Capricorne tigre", bg:"condition/capricorne_tigre_lieu.png", cond:"condition/capricorne_tigre_meteo.png", heure:"condition/capricorne_tigre_heure.png"},
     {name:"Cétoine étoile bleue", bg:"condition/cetoine_etoilee_bleue_lieu.png", cond:"condition/cetoine_etoilee_bleue_meteo.png", heure:"condition/cetoine_etoilee_bleue_heure.png"},
     {name:"Cicindèle verte", bg:"condition/cicindele_verte_lieu.png", cond:"condition/cicindele_verte_meteo.png", heure:"condition/cicindele_verte_heure.png"},
+    {name:"Cigale", bg:"condition/cigale_lieu.png", cond:"condition/cigale_meteo.png", heure:"condition/cigale_heure.png"},
     {name:"Citron aspasia", bg:"condition/citron_aspasia_lieu.png", cond:"condition/citron_aspasia_meteo.png", heure:"condition/citron_aspasia_heure.png"},
     {name:"Coccinelle à 7 points", bg:"condition/coccinelle_a_sept_points_lieu.png", cond:"condition/coccinelle_a_sept_points_meteo.png", heure:"condition/coccinelle_a_sept_points_heure.png"},
     {name:"Coccinelle asiatique", bg:"condition/coccinelle_asiatique_lieu.png", cond:"condition/coccinelle_asiatique_meteo.png", heure:"condition/coccinelle_asiatique_heure.png"},
     {name:"Criocère de l'asperge", bg:"condition/criocere_de_lasperge_lieu.png", cond:"condition/criocere_de_lasperge_meteo.png", heure:"condition/criocere_de_lasperge_heure.png"},
+    {name:"Criquet à ailes réticulées", bg:"condition/criquet_a_ailes_reticulees_lieu.png", cond:"condition/criquet_a_ailes_reticulees_meteo.png", heure:"condition/criquet_a_ailes_reticulees_heure.png"},
     {name:"Criquet aux pattes massives", bg:"condition/criquet_aux_pattes_massives_lieu.png", cond:"condition/criquet_aux_pattes_massives_meteo.png", heure:"condition/criquet_aux_pattes_massives_heure.png"},
+    {name:"Fourmi", bg:"condition/fourmi_lieu.png", cond:"condition/fourmi_meteo.png", heure:"condition/fourmi_heure.png"},
     {name:"Grand agrion", bg:"condition/grand_agrion_lieu.png", cond:"condition/grand_agrion_meteo.png", heure:"condition/grand_agrion_heure.png"},
+    {name:"Grillon", bg:"condition/grillon_lieu.png", cond:"condition/grillon_meteo.png", heure:"condition/grillon_heure.png"},
+    {name:"Libellule à queue blanche", bg:"condition/libellule_a_queue_blanche_lieu.png", cond:"condition/libellule_a_queue_blanche_meteo.png", heure:"condition/libellule_a_queue_blanche_heure.png"},
     {name:"Libellule tachetée", bg:"condition/libellule_tachetee_lieu.png", cond:"condition/libellule_tachetee_meteo.png", heure:"condition/libellule_tachetee_heure.png"},
+    {name:"Mante arc-en-ciel", bg:"condition/mante_arcenciel_lieu.png", cond:"condition/mante_arcenciel_meteo.png", heure:"condition/mante_arcenciel_heure.png"},
+    {name:"Mante papoue", bg:"condition/mante_papoue_lieu.png", cond:"condition/mante_papoue_meteo.png", heure:"condition/mante_papoue_heure.png"},
+    {name:"Mélitée léopard", bg:"condition/melitee_leopard_lieu.png", cond:"condition/melitee_leopard_meteo.png", heure:"condition/melitee_leopard_heure.png"},
+    {name:"Paon-du-jour", bg:"condition/paondujour_lieu.png", cond:"condition/paondujour_meteo.png", heure:"condition/paondujour_heure.png"},
     {name:"Papillon à anneaux rouges", bg:"condition/papillon_a_anneaux_rouges_lieu.png", cond:"condition/papillon_a_anneaux_rouges_meteo.png", heure:"condition/papillon_a_anneaux_rouges_heure.png"},
     {name:"Papillon à col rouge", bg:"condition/papillon_a_col_rouge_lieu.png", cond:"condition/papillon_a_col_rouge_meteo.png", heure:"condition/papillon_a_col_rouge_heure.png"},
     {name:"Papillon blanc", bg:"condition/papillon_blanc_lieu.png", cond:"condition/papillon_blanc_meteo.png", heure:"condition/papillon_blanc_heure.png"},
     {name:"Papillon doré", bg:"condition/papillon_dore_lieu.png", cond:"condition/papillon_dore_meteo.png", heure:"condition/papillon_dore_heure.png"},
+    {name:"Papillon sorcière blanche", bg:"condition/Papillon_sorcière_blanche_lieu.png", cond:"condition/Papillon_sorcière_blanche_meteo.png", heure:"condition/Papillon_sorcière_blanche_heure.png"},
     {name:"Parnassien", bg:"condition/parnassien_lieu.png", cond:"condition/parnassien_meteo.png", heure:"condition/parnassien_heure.png"},
     {name:"Piéride du cresson", bg:"condition/pieride_du_cresson_lieu.png", cond:"condition/pieride_du_cresson_meteo.png", heure:"condition/pieride_du_cresson_heure.png"},
     {name:"Punaise Picasso", bg:"condition/punaise_picasso_lieu.png", cond:"condition/punaise_picasso_meteo.png", heure:"condition/punaise_picasso_heure.png"},
     {name:"Pyrochroa", bg:"condition/pyrochroa_lieu.png", cond:"condition/pyrochroa_meteo.png", heure:"condition/pyrochroa_heure.png"},
     {name:"Pyrrhocore", bg:"condition/pyrrhocoris_apterus_lieu.png", cond:"condition/pyrrhocoris_apterus_meteo.png", heure:"condition/pyrrhocoris_apterus_heure.png"},
     {name:"Sauterelle de l'oasis", bg:"condition/sauterelle_de_loasis_lieu.png", cond:"condition/sauterelle_de_loasis_meteo.png", heure:"condition/sauterelle_de_loasis_heure.png"},
-    {name:"Scarabée licorne", bg:"condition/scarabee_unicorne_lieu.png", cond:"condition/scarabee_unicorne_meteo.png", heure:"condition/scarabee_unicorne_heure.png"}
-];
+    {name:"Sauterelle rose", bg:"condition/sauterelle_rose_lieu.png", cond:"condition/sauterelle_rose_meteo.png", heure:"condition/sauterelle_rose_heure.png"},
+    {name:"Scarabée licorne", bg:"condition/scarabee_unicorne_lieu.png", cond:"condition/scarabee_unicorne_meteo.png", heure:"condition/scarabee_unicorne_heure.png"},
+    {name:"Vanesse violette", bg:"condition/Vanesse_violette_lieu.png", cond:"condition/Vanesse_violette_meteo.png", heure:"condition/Vanesse_violette_heure.png"}
+
 
 // 10. OISEAUX
 const birdList = [
