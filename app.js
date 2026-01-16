@@ -16,34 +16,11 @@ function toggleMobileLegend() {
     if(legend.classList.contains('mobile-visible')) document.getElementById('main-menu').classList.remove('mobile-visible');
 }
 
-let mapInstance;
-
-function initMap() {
-    if (mapInstance) return;
-
-    mapInstance = L.map('map').setView([0, 0], 4);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapInstance);
-}
-
-
 function startExperience() { 
     // Audio
     const audio = document.getElementById('main-audio');
     if (audio) {
         audio.play().catch(() => {});
-    }
-
-    // Map visible
-    const map = document.getElementById('map');
-    if (map) {
-        map.style.display = 'block';
-        map.style.opacity = '1';
-    }
-
-    // Welcome modal optionnel
-    const modal = document.getElementById('welcome-modal');
-    if (modal) {
-        modal.style.display = 'flex';
     }
 }
 function closeWelcome() { document.getElementById('welcome-modal').style.display = 'none'; }
