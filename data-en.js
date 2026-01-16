@@ -173,7 +173,7 @@ const resourcesData = {
             [-330.4, 420.9], [-333.8, 452.9]
         ] 
     },
-    "Porcini": { 
+    "Penny Bun": { 
         icon: "resource/cépes de bordeaux.png", 
         positions: [
             [-615, 796.9], [-620, 778.1], [-610.6, 759.9], [-634.9, 745.5], 
@@ -399,3 +399,4 @@ const birdList = [
     {name:"Spotted Dove", bg:"condition/tourterelle_tigrine_lieu.png", cond:"condition/tourterelle_tigrine_meteo.png", heure:"condition/tourterelle_tigrine_heure.png"},
     {name:"Wren", bg:"condition/troglodyte_lieu.png", cond:"condition/troglodyte_meteo.png", heure:"condition/troglodyte_heure.png"}
 ];
+
