@@ -18,26 +18,26 @@ const TEXTS = {
 
 // 2. NPC LIST
 const PNJ_DATA = [
-    [-471, 501, "Bob", "pnj/bob.png"],
-    [-526, 499, "Atara", "pnj/atara.png"],
-    [-478, 493, "Collector", "pnj/collectioneur.png"],
-    [-469, 488, "Dorothy", "pnj/dorothée.png"],
-    [-446, 493, "Massimo", "pnj/massimo.png"],
-    [-412, 418, "Ka Ching", "pnj/ka ching.png"],
-    [-399, 591, "Andrew", "pnj/andrew.png"],
-    [-259, 522, "Eric", "pnj/eric.png"],
-    [-456, 549, "Vanya", "pnj/vanya.png"],
-    [-502, 582, "Naniwa", "pnj/naniwa.png"],
-    [-502, 519, "Mrs. Joan", "pnj/mme joan.png"],
-    [-807, 419, "Will", "pnj/will.png"],
-    [-355, 809, "Patti", "pnj/patti.png"],
-    [-653, 225, "Vernie", "pnj/vernie.png"],
-    [-498, 526, "Bailey J", "pnj/bayleyj.png"],
-    [-528.3, 560.3, "Blanc", "pnj/blanc.png"],
-    [-499.8, 499.0, "Annie", "pnj/annie.png"],
-    [-532.4, 634.8, "Albert Jr.", "pnj/albert jr.png"],
-    [-734.8, 445.8, "Bill", "pnj/bill.png"],
-    [-509.4, 414, "Doris (Rain)", "pnj/doris.png"]
+    [-471, 501, "Bob", "resource/pnj/bob.png"],
+    [-526, 499, "Atara", "resource/pnj/atara.png"],
+    [-478, 493, "Collector", "resource/pnj/collectioneur.png"],
+    [-469, 488, "Dorothy", "resource/pnj/dorothée.png"],
+    [-446, 493, "Massimo", "resource/pnj/massimo.png"],
+    [-412, 418, "Ka Ching", "resource/pnj/ka ching.png"],
+    [-399, 591, "Andrew", "resource/pnj/andrew.png"],
+    [-259, 522, "Eric", "resource/pnj/eric.png"],
+    [-456, 549, "Vanya", "resource/pnj/vanya.png"],
+    [-502, 582, "Naniwa", "resource/pnj/naniwa.png"],
+    [-502, 519, "Mrs. Joan", "resource/pnj/mme joan.png"],
+    [-807, 419, "Will", "resource/pnj/will.png"],
+    [-355, 809, "Patti", "resource/pnj/patti.png"],
+    [-653, 225, "Vernie", "resource/pnj/vernie.png"],
+    [-498, 526, "Bailey J", "resource/pnj/bayleyj.png"],
+    [-528.3, 560.3, "Blanc", "resource/pnj/blanc.png"],
+    [-499.8, 499.0, "Annie", "resource/pnj/annie.png"],
+    [-532.4, 634.8, "Albert Jr.", "resource/pnj/albert jr.png"],
+    [-734.8, 445.8, "Bill", "resource/pnj/bill.png"],
+    [-509.4, 414, "Doris (Rain)", "resource/pnj/doris.png"]
 ];
 
 // 3. BUS STOPS
@@ -49,20 +49,20 @@ const BUS_DATA = [
 
 // 4. SHOPS
 const SHOP_DATA = [
-    [-472,487,"Clothing Store","vetement.png"],[-474,503,"Furniture Store","Meuble.png"],
-    [-496.4,520.6,"Pet's Home","chien.png"],[-440,467,"Bookstore","Librairie.png"]
+    [-472,487,"Clothing Store","resource/vetement.png"],[-474,503,"Furniture Store","resource/meuble.png"],
+    [-496,520,"Pet's Home","resource/chien.png"],[-440,467,"Bookstore","resource/librairie.png"]
 ];
 
 // 5. ANIMALS
 const ANIMAL_DATA = [
-    {pos: [-691, 783], name: "Panda", img: "panda.png", radius: 60},
-    {pos: [-184, 291], name: "Capybara", img: "capybara.png", radius: 50},
-    {pos: [-533, 340], name: "Bunny", img: "lapin.png", radius: 40},
-    {pos: [-649, 185], name: "Fox", img: "renard.png", radius: 70},
-    {pos: [-737, 512], name: "Sea Otter", img: "loutre.png", radius: 40},
-    {pos: [-354.3, 277.3], name: "Mink", img: "vison.png", radius: 10},
-    {pos: [-531, 805], name: "Ferret", img: "cerf.png", radius: 60},
-    {pos: [-725, 208], name: "Silka Deer", img: "lama.png", radius: 50}
+    {pos: [-691, 783], name: "Panda", img: "resource/animaux/panda.png", radius: 60},
+    {pos: [-184, 291], name: "Capybara", img: "resource/animaux/capybara.png", radius: 50},
+    {pos: [-533, 340], name: "Bunny", img: "resource/animaux/lapin.png", radius: 40},
+    {pos: [-649, 185], name: "Fox", img: "resource/animaux/renard.png", radius: 70},
+    {pos: [-737, 512], name: "Sea Otter", img: "resource/animaux/loutre.png", radius: 40},
+    {pos: [-354.3, 277.3], name: "Mink", img: "resource/animaux/vison.png", radius: 10},
+    {pos: [-531, 805], name: "Ferret", img: "resource/animaux/cerf.png", radius: 60},
+    {pos: [-725, 208], name: "Silka Deer", img: "resource/animaux/lama.png", radius: 50}
 ];
 
 // 6. LOCATIONS

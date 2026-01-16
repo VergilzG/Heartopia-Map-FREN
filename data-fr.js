@@ -18,26 +18,26 @@ const TEXTS = {
 
 // 2. LISTE DES PNJS
 const PNJ_DATA = [
-    [-471, 501, "Bob", "pnj/bob.png"],
-    [-526, 499, "Atara", "pnj/atara.png"],
-    [-478, 493, "Collectionneur", "pnj/collectioneur.png"],
-    [-469, 488, "Dorothée", "pnj/dorothée.png"],
-    [-446, 493, "Massimo", "pnj/massimo.png"],
-    [-412, 418, "Ka Ching", "pnj/ka ching.png"],
-    [-399, 591, "Andrew", "pnj/andrew.png"],
-    [-259, 522, "Eric", "pnj/eric.png"],
-    [-456, 549, "Vanya", "pnj/vanya.png"],
-    [-502, 582, "Naniwa", "pnj/naniwa.png"],
-    [-502, 519, "Mme Joan", "pnj/mme joan.png"],
-    [-807, 419, "Will", "pnj/will.png"],
-    [-355, 809, "Patti", "pnj/patti.png"],
-    [-653, 225, "Vernie", "pnj/vernie.png"],
-    [-498, 526, "Bailey j", "pnj/bayleyj.png"],
-    [-528.3, 560.3, "Blanc", "pnj/blanc.png"],
-    [-499.8, 499.0, "Annie", "pnj/annie.png"],
-    [-532.4, 634.8, "Albert Jr.", "pnj/albert jr.png"],
-    [-734.8, 445.8, "Bill", "pnj/bill.png"],
-	[-509.4, 414, "Doris (pluie)", "pnj/doris.png"]
+    [-471, 501, "Bob", "resource/pnj/bob.png"],
+    [-526, 499, "Atara", "resource/pnj/atara.png"],
+    [-478, 493, "Collectionneur", "resource/pnj/collectioneur.png"],
+    [-469, 488, "Dorothée", "resource/pnj/dorothée.png"],
+    [-446, 493, "Massimo", "resource/pnj/massimo.png"],
+    [-412, 418, "Ka Ching", "resource/pnj/ka ching.png"],
+    [-399, 591, "Andrew", "resource/pnj/andrew.png"],
+    [-259, 522, "Eric", "resource/pnj/eric.png"],
+    [-456, 549, "Vanya", "resource/pnj/vanya.png"],
+    [-502, 582, "Naniwa", "resource/pnj/naniwa.png"],
+    [-502, 519, "Mme Joan", "resource/pnj/mme joan.png"],
+    [-807, 419, "Will", "resource/pnj/will.png"],
+    [-355, 809, "Patti", "resource/pnj/patti.png"],
+    [-653, 225, "Vernie", "resource/pnj/vernie.png"],
+    [-498, 526, "Bailey j", "resource/pnj/bayleyj.png"],
+    [-528.3, 560.3, "Blanc", "resource/pnj/blanc.png"],
+    [-499.8, 499.0, "Annie", "resource/pnj/annie.png"],
+    [-532.4, 634.8, "Albert Jr.", "resource/pnj/albert jr.png"],
+    [-734.8, 445.8, "Bill", "resource/pnj/bill.png"],
+	[-509.4, 414, "Doris (pluie)", "resource/pnj/doris.png"]
 ];
 
 // 3. BUS
@@ -49,20 +49,20 @@ const BUS_DATA = [
 
 // 4. MAGASINS
 const SHOP_DATA = [
-    [-472,487,"Magasin de vêtements","vetement.png"],[-474,503,"Magasin de meubles","Meuble.png"],
-    [-496.4,520.6,"Maison pour animaux","chien.png"],[-440,467,"Librairie","Librairie.png"]
+    [-472,487,"Magasin de vêtements","resource/vetement.png"],[-474,503,"Magasin de meubles","resource/meuble.png"],
+    [-496.4,520.6,"Maison pour animaux","resource/chien.png"],[-440,467,"Librairie","resource/librairie.png"]
 ];
 
 // 5. ANIMAUX
 const ANIMAL_DATA = [
-    {pos: [-691, 783], name: "Panda", img: "panda.png", radius: 60},
-    {pos: [-184, 291], name: "Capybara", img: "capybara.png", radius: 50},
-    {pos: [-533, 340], name: "Lapin", img: "lapin.png", radius: 40},
-    {pos: [-649, 185], name: "Renard", img: "renard.png", radius: 70},
-    {pos: [-737, 512], name: "Loutre", img: "loutre.png", radius: 40},
-    {pos: [-354.3, 277.3], name: "Vison", img: "vison.png", radius: 10},
-    {pos: [-531, 805], name: "Cerf silka", img: "cerf.png", radius: 60},
-    {pos: [-725, 208], name: "Lama", img: "lama.png", radius: 50}
+    {pos: [-691, 783], name: "Panda", img: "resource/animaux/panda.png", radius: 60},
+    {pos: [-184, 291], name: "Capybara", img: "resource/animaux/capybara.png", radius: 50},
+    {pos: [-533, 340], name: "Lapin", img: "resource/animaux/lapin.png", radius: 40},
+    {pos: [-649, 185], name: "Renard", img: "resource/animaux/renard.png", radius: 70},
+    {pos: [-737, 512], name: "Loutre", img: "resource/animaux/loutre.png", radius: 40},
+    {pos: [-354.3, 277.3], name: "Vison", img: "resource/animaux/vison.png", radius: 10},
+    {pos: [-531, 805], name: "Cerf silka", img: "resource/animaux/cerf.png", radius: 60},
+    {pos: [-725, 208], name: "Lama", img: "resource/animaux/lama.png", radius: 50}
 ];
 
 // 6. LIEUX
@@ -170,7 +170,7 @@ const resourcesData = {
 		[-410.8, 314], [-397.3, 310.1], [-310.9, 339.3], [-327.6, 373.9], [-324.9, 391.9],
 		[-295.4, 411.1], [-330.4, 420.9], [-333.8, 452.9]] },
     "Cèpe de Bordeaux": { 
-        icon: "resource/cépes de bordeaux.png", 
+        icon: "resource/cepes de bordeaux.png", 
         positions: [
             [-615, 796.9], [-620, 778.1], [-610.6, 759.9], [-634.9, 745.5], [-650, 773.5],
 			[-639, 800.6], [-543.5, 776.3], [-523.6, 777], [-524.3, 818.9], [-479.9, 780.8],
@@ -182,7 +182,7 @@ const resourcesData = {
             [-358.1, 911.1], [-357.4, 926.1], [-340.4, 913.6], [-325.8, 920], [-342.1, 956.5],
 			[-363.3, 961.8]] },
     "Lentins du Chêne": { 
-        icon: "resource/Lentins du chene.png", 
+        icon: "resource/lentins du chene.png", 
         positions: [
             [-772.3, 411.8], [-763.5, 397], [-736.8, 426.1], [-717.3, 446.8], [-705.8, 432.1],
 			[-667.1, 462.5], [-666.6, 482.5], [-698.5, 491.8], [-698.3, 520.5], [-690.3, 542.6],

@@ -28,7 +28,7 @@ function closeWelcome() { document.getElementById('welcome-modal').style.display
 // --- CONFIGURATION CARTE ---
 var bounds = [[-1000, 0], [0, 1000]];
 var map = L.map('map', { crs: L.CRS.Simple, minZoom: 0, maxZoom: 3, zoom: 1, zoomControl: false, maxBounds: bounds, maxBoundsViscosity: 1.0 });
-L.imageOverlay('carte.png', bounds).addTo(map);
+L.imageOverlay('resource/carte.png', bounds).addTo(map);
 map.setView([-500, 500], 1);
 map.on('zoomstart', () => { document.body.classList.add('is-zooming'); });
 map.on('zoomend', () => { document.body.classList.remove('is-zooming'); });
@@ -154,7 +154,7 @@ function loadExternalData() {
     // 1. PNJs
     if(typeof PNJ_DATA !== 'undefined') PNJ_DATA.forEach(d => register('pnj', [d[0], d[1]], d[2], d[3]));
     // 2. BUS
-    if(typeof BUS_DATA !== 'undefined') BUS_DATA.forEach(b => register('bus', b[1], b[0], 'bus.png', {startOn: true}));
+    if(typeof BUS_DATA !== 'undefined') BUS_DATA.forEach(b => register('bus', b[1], b[0], 'resource/bus.png', {startOn: true}));
     // 3. SHOPS
     if(typeof SHOP_DATA !== 'undefined') SHOP_DATA.forEach(s => register('shop', [s[0],s[1]], s[2], s[3]));
     // 4. ANIMAUX
