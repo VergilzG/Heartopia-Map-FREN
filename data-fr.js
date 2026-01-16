@@ -37,8 +37,8 @@ const PNJ_DATA = [
     [-528.3, 560.3, "Blanc", "pnj/blanc.png"],
     [-499.8, 499.0, "Annie", "pnj/annie.png"],
     [-532.4, 634.8, "Albert Jr.", "pnj/albert jr.png"],
-    [-734.8, 445.8, "Bill", "pnj/bill.png"]
-	[-509.4, 414, "Doris (pluie)", "pnj/doris.png"]
+    [-734.8, 445.8, "Bill", "pnj/bill.png"],
+	[-509.4, 414, "Doris (pluie)", "pnj/doris.png"],
 ];
 
 // 3. BUS
@@ -338,6 +338,7 @@ const birdList = [
     {name:"Tourterelle tigrine", bg:"condition/tourterelle_tigrine_lieu.png", cond:"condition/tourterelle_tigrine_meteo.png", heure:"condition/tourterelle_tigrine_heure.png"},
     {name:"Troglodyte", bg:"condition/troglodyte_lieu.png", cond:"condition/troglodyte_meteo.png", heure:"condition/troglodyte_heure.png"}
 ];
+
 
 
 
