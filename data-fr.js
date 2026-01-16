@@ -2,8 +2,7 @@
 
 // 1. TEXTES UI (Pour le multilingue)
 const TEXTS = {
-    title: "MAPTOPIA FR",
-    enterBtn: "✨ ENTRER SUR LA CARTE ✨",
+    title: "Carte Interactive - Heartopia FRANCAIS",
     menu: {
         pnj: "PNJs",
         animals: "ANIMAUX",
@@ -43,15 +42,15 @@ const PNJ_DATA = [
 
 // 3. BUS
 const BUS_DATA = [
-    ["Banlieue Ouest",[-533,340]], ["Banlieue Village",[-519,639]], ["Village Pêcheurs",[-654,479]], 
-    ["Champ Fleurs",[-532,218]], ["Montagne Thermale",[-222,512]], ["Banlieue Nord",[-373,480]], 
+    ["Banlieue Ouest du village",[-533,340]], ["Banlieue est du village",[-519,639]], ["Village de pêcheurs",[-654,479]], 
+    ["Champ de fleurs",[-532,218]], ["Montagne Thermale",[-222,512]], ["Banlieue Nord",[-373,480]], 
     ["Place Centrale",[-497,481]], ["Forêt",[-500,798]]
 ];
 
 // 4. MAGASINS
 const SHOP_DATA = [
-    [-472,487,"Vêtements","vetement.png"],[-474,503,"Meubles","Meuble.png"],
-    [-496.4,520.6,"Animaux","chien.png"],[-440,467,"Librairie","Librairie.png"]
+    [-472,487,"Magasin de vêtements","vetement.png"],[-474,503,"Magasin de meubles","Meuble.png"],
+    [-496.4,520.6,"Maison pour animaux","chien.png"],[-440,467,"Librairie","Librairie.png"]
 ];
 
 // 5. ANIMAUX
@@ -62,102 +61,145 @@ const ANIMAL_DATA = [
     {pos: [-649, 185], name: "Renard", img: "renard.png", radius: 70},
     {pos: [-737, 512], name: "Loutre", img: "loutre.png", radius: 40},
     {pos: [-354.3, 277.3], name: "Vison", img: "vison.png", radius: 10},
-    {pos: [-531, 805], name: "Cerf", img: "cerf.png", radius: 60},
+    {pos: [-531, 805], name: "Cerf silka", img: "cerf.png", radius: 60},
     {pos: [-725, 208], name: "Lama", img: "lama.png", radius: 50}
 ];
 
 // 6. LIEUX
 const LIEUX_DATA = [
-    {pos:[-538,492], name:"Place Centrale", type:"label-ville", startOn:true}, 
-    {pos:[-692,506], name:"Village Pêcheurs", type:"label-ville", startOn:true}, 
+	//Partie centrale
+	{pos:[-538,492], name:"Place centrale", type:"label-ville", startOn:true}, 
+    {pos:[-494,429], name:"Rue des arts", type:"label-ville", startOn:true}, 
+    {pos:[-510,558], name:"Rue du jardins", type:"label-ville", startOn:true}, 
     {pos:[-438,513], name:"Rue des Habitants", type:"label-ville", startOn:true}, 
-    {pos:[-649,185], name:"Champ de Fleurs", type:"label-ville", startOn:true}, 
-    {pos:[-440,184], name:"Montagne de la Baleine", type:"label-ville", startOn:true}, 
-    {pos:[-184,291], name:"Les Ruines", type:"label-ville", startOn:true}, 
-    {pos:[-223,501], name:"Montagne Thermale", type:"label-ville", startOn:true}, 
-    {pos:[-228,627], name:"Falaise Rocheuse", type:"label-ville", startOn:true}, 
-    {pos:[-531,805], name:"Forêt des Chênes", type:"label-ville", startOn:true}, 
-    {pos:[-494,429], name:"Rue des Arts", type:"label-ville", startOn:true}, 
-    {pos:[-510,558], name:"Rue des Jardins", type:"label-ville", startOn:true}, 
-    {pos:[-736,602], name:"Quai Oriental", type:"label-ville", startOn:true}, 
-    {pos:[-690,402], name:"Le Quai", type:"label-ville", startOn:true}, 
+	{pos:[-587,406], name:"Banlieue", type:"label-ville", startOn:true}, 
+	{pos:[-608,481], name:"Lac de Banlieue", type:"label-eau", startOn:true}, 
+	// Partie NORD
+	// Lac de gauche
+    {pos:[-176,394], name:"Lac de Montagne thermale", type:"label-eau", startOn:true}, 
+    // Lac de droite
+	{pos:[-265,537], name:"Lac de Montagne thermale", type:"label-eau", startOn:true}, 
+	{pos:[-68,497], name:"Ancienne mer", type:"label-eau", startOn:true}, 
+    {pos:[-228,627], name:"Falaise rocheuse", type:"label-ville", startOn:true}, 
+    {pos:[-223,501], name:"Source thermale", type:"label-ville", startOn:true}, 
+    {pos:[-184,291], name:"Ruines", type:"label-ville", startOn:true}, 
+
+    // Partie SUD
+	{pos:[-783,478], name:"Mer calme", type:"label-eau", startOn:true}, 
     {pos:[-780,387], name:"Phare", type:"label-ville", startOn:true}, 
+    {pos:[-690,402], name:"Quai", type:"label-ville", startOn:true}, 
+    {pos:[-736,602], name:"Quai oriental du village de pêcheurs", type:"label-ville", startOn:true}, 
+    {pos:[-692,506], name:"Place du village de pêcheurs", type:"label-ville", startOn:true}, 
+	
+	// Partie EST
+	// Lac du haut
+	{pos:[-431,774], name:"Lac de la forêt", type:"label-eau", startOn:true}, 
+	// Lac du bas
+    {pos:[-598,748], name:"Lac de la forêt", type:"label-eau", startOn:true}, 
+	{pos:[-338,933], name:"Île de la forêt", type:"label-ville", startOn:true}, 
     {pos:[-691,783], name:"Tremplin", type:"label-ville", startOn:true}, 
-    {pos:[-338,933], name:"Île de la Forêt", type:"label-ville", startOn:true}, 
-    {pos:[-587,406], name:"Banlieue", type:"label-ville", startOn:true}, 
-    {pos:[-725,208], name:"Plage Violette", type:"label-ville", startOn:true}, 
-    {pos:[-783,478], name:"Mer Calme", type:"label-eau", startOn:true}, 
-    {pos:[-534,92], name:"Mer de la Baleine", type:"label-eau", startOn:true}, 
-    {pos:[-68,497], name:"Mer Ancienne", type:"label-eau", startOn:true}, 
-    {pos:[-536,232], name:"Lac de la Prairie", type:"label-eau", startOn:true}, 
-    {pos:[-337,319], name:"Rivière Aurore", type:"label-eau", startOn:true}, 
-    {pos:[-176,394], name:"Lac Volcanique", type:"label-eau", startOn:true}, 
-    {pos:[-265,537], name:"Lac de la source Thermale", type:"label-eau", startOn:true}, 
-    {pos:[-344,652], name:"Rivière Peu Profonde", type:"label-eau", startOn:true}, 
-    {pos:[-598,748], name:"Lac de la Forêt", type:"label-eau", startOn:true}, 
-    {pos:[-431,774], name:"Haut Lac Forêt", type:"label-eau", startOn:true}, 
-    {pos:[-608,481], name:"Lac de Banlieue", type:"label-eau", startOn:true}, 
-    {pos:[-669,368], name:"Rivière Tranquille", type:"label-eau", startOn:true}, 
-    {pos:[-674,627], name:"Rivière Arbres Géants", type:"label-eau", startOn:true}, 
-    {pos:[-600,600], name:"Champ de Fleurs au Moulin", type:"label-ville", startOn:true}, 
-    {pos:[-670,450], name:"Ponton Est", type:"label-ville", startOn:true}
+    {pos:[-531,805], name:"Forêt des chênes spirituels", type:"label-ville", startOn:true}, 
+
+	// Partie OUEST
+	{pos:[-536,232], name:"Lac dans la prairie", type:"label-eau", startOn:true},
+    {pos:[-649,185], name:"Champ de fleurs des moulins à vent", type:"label-ville", startOn:true}, 
+    {pos:[-440,184], name:"Montagne de baleine", type:"label-ville", startOn:true}, 
+    {pos:[-534,92], name:"Mer de baleine", type:"label-eau", startOn:true}, 
+    {pos:[-725,208], name:"Plage violette", type:"label-ville", startOn:true}, 
+
+	// RIVIERE 4 COINS
+	// RIVIERE NORD OUEST
+	{pos:[-337,319], name:"Rivière aurore", type:"label-eau", startOn:true}, 
+	// RIVIERE NORD EST
+	{pos:[-344,652], name:"Rivière peu profonde", type:"label-eau", startOn:true},
+	// RIVIERE SUD OUEST
+	{pos:[-669,368], name:"Rivière calme", type:"label-eau", startOn:true}, 
+	// RIVIERE SUD EST
+	{pos:[-674,627], name:"Fleuve d'arbre géants", type:"label-eau", startOn:true}, 
 ];
 
-// // 7. RESSOURCES
+// 7. RESSOURCES
 const resourcesData = {
-    "Framboise": { icon: "resource/framboise.png", positions: [[-680.8, 330.9], [-668.5, 352.1], [-667.9, 268.5], [-648.3, 288.6], [-613.5, 317.4], [-602.8, 274.5], [-617.6, 211.6], [-571.5, 254.4], [-538.9, 208.6], [-527.8, 251.6], [-535.8, 288.3], [-503.1, 242.9], [-495, 222.4], [-453.8, 222.4], [-438.6, 246], [-395, 247.4], [-387.1, 269.5]] },
-    "Myrtille": { icon: "resource/myrtille.png", positions: [[-642.9, 371.9], [-631.9, 368.4], [-628.5, 365.5], [-606.8, 350.3], [-602.5, 342.3], [-590.1, 334.1], [-575.6, 332.1], [-562.1, 330], [-544.9, 324.5], [-518.4, 320.3], [-515.9, 320.5], [-500.8, 321.1], [-479.3, 328.6], [-468.3, 320], [-437.3, 313.9], [-411.4, 311.4], [-400.3, 311.4], [-379.5, 304.1], [-327.4, 352], [-313.6, 339], [-328.6, 371.5], [-324.4, 389.3], [-297.9, 410.8], [-271.6, 395.4], [-319.9, 413.5], [-330.4, 421.6], [-333.4, 450], [-338.6, 468.6], [-297.4, 484.4], [-349, 489.4], [-356.5, 499.3], [-360.4, 526.4], [-355.5, 545.1], [-352.9, 565.9], [-316, 558.1], [-363.6, 578.4], [-365.3, 609], [-360.9, 628.1], [-343, 634], [-388, 655.4], [-400.9, 654.3], [-421.9, 656.4], [-444.1, 670.6], [-462.5, 654], [-476.8, 654.6], [-491.6, 656.3], [-506.4, 672.4], [-525.4, 688], [-542.6, 650], [-559.3, 644.9], [-575.6, 651], [-597.8, 643.8], [-604.8, 633.8], [-627.9, 619.4]] },
-    "Pomme": { icon: "resource/pomme.png", positions: [[-356.3, 493], [-365.4, 560.1], [-362.4, 581], [-324.6, 570.1], [-296, 610.3], [-365.6, 619.5], [-362.8, 628.5], [-393.5, 654.8], [-420.6, 653.3], [-436.1, 665.4], [-444.4, 685.1], [-436.6, 697.5], [-458.4, 744.9], [-505, 677.3], [-494.5, 657], [-459.8, 653.6], [-530.1, 677.9], [-540.1, 648.6], [-592.8, 676.6], [-606.9, 634.1], [-629.3, 623]] },
-    "Grand Arbre": { icon: "resource/grand arbre.png", positions: [[-612, 424.5], [-641.8, 369], [-351, 329.5], [-414.3, 337.1], [-396.3, 608.9], [-376.3, 624], [-616, 593.6], [-672.3, 642]] },
-    "Pierre": { icon: "resource/pierre.png", positions: [[-615.9, 316], [-641.5, 278.8], [-558.4, 257.4], [-535, 292], [-499.5, 241.1], [-466.8, 283.1], [-407.1, 244.1], [-284, 402.8], [-254.6, 367.9], [-309.4, 479.1], [-263, 466.6], [-289.1, 544.6], [-315.5, 567.9], [-298.6, 625.4], [-391.3, 726.9], [-443.6, 697], [-468.6, 733.8], [-519, 714.9], [-564.9, 732.8], [-605.1, 680.3], [-673.9, 684.1]] },
-    "Orange": { icon: "resource/orange.png", positions: [[-650.1, 370.9], [-639.5, 372], [-607.3, 351.4], [-602.9, 343.5], [-588.6, 336.6], [-559.6, 329.5], [-542.1, 324.8], [-515, 319.5], [-470.5, 321], [-461.4, 271.5], [-410.8, 314], [-397.3, 310.1], [-310.9, 339.3], [-327.6, 373.9], [-324.9, 391.9], [-295.4, 411.1], [-330.4, 420.9], [-333.8, 452.9]] },
-    
-    // --- NOUVEAUX CHAMPIGNONS AJOUTÉS ---
+    "Framboise": {
+		icon: "resource/framboise.png",
+		positions: [
+		[-680.8, 330.9], [-668.5, 352.1], [-667.9, 268.5], [-648.3, 288.6], [-613.5, 317.4],
+		[-602.8, 274.5], [-617.6, 211.6], [-571.5, 254.4], [-538.9, 208.6], [-527.8, 251.6],
+		[-535.8, 288.3], [-503.1, 242.9], [-495, 222.4], [-453.8, 222.4], [-438.6, 246],
+		[-395, 247.4], [-387.1, 269.5]] },
+    "Myrtille": {
+		icon: "resource/myrtille.png",
+		positions: [
+		[-642.9, 371.9], [-631.9, 368.4], [-628.5, 365.5], [-606.8, 350.3], [-602.5, 342.3],
+		[-590.1, 334.1], [-575.6, 332.1], [-562.1, 330], [-544.9, 324.5], [-518.4, 320.3],
+		[-515.9, 320.5], [-500.8, 321.1], [-479.3, 328.6], [-468.3, 320], [-437.3, 313.9],
+		[-411.4, 311.4], [-400.3, 311.4], [-379.5, 304.1], [-327.4, 352], [-313.6, 339],
+		[-328.6, 371.5], [-324.4, 389.3], [-297.9, 410.8], [-271.6, 395.4], [-319.9, 413.5],
+		[-330.4, 421.6], [-333.4, 450], [-338.6, 468.6], [-297.4, 484.4], [-349, 489.4],
+		[-356.5, 499.3], [-360.4, 526.4], [-355.5, 545.1], [-352.9, 565.9], [-316, 558.1],
+		[-363.6, 578.4], [-365.3, 609], [-360.9, 628.1], [-343, 634], [-388, 655.4],
+		[-400.9, 654.3], [-421.9, 656.4], [-444.1, 670.6], [-462.5, 654], [-476.8, 654.6],
+		[-491.6, 656.3], [-506.4, 672.4], [-525.4, 688], [-542.6, 650], [-559.3, 644.9],
+		[-575.6, 651], [-597.8, 643.8], [-604.8, 633.8], [-627.9, 619.4]] },
+    "Pomme": {
+		icon: "resource/pomme.png",
+		positions: [
+		[-356.3, 493], [-365.4, 560.1], [-362.4, 581], [-324.6, 570.1], [-296, 610.3],
+		[-365.6, 619.5], [-362.8, 628.5], [-393.5, 654.8], [-420.6, 653.3], [-436.1, 665.4],
+		[-444.4, 685.1], [-436.6, 697.5], [-458.4, 744.9], [-505, 677.3], [-494.5, 657],
+		[-459.8, 653.6], [-530.1, 677.9], [-540.1, 648.6], [-592.8, 676.6], [-606.9, 634.1],
+		[-629.3, 623]] },
+    "Grand Arbre": {
+		icon: "resource/grand arbre.png",
+		positions: [
+		[-612, 424.5], [-641.8, 369], [-351, 329.5], [-414.3, 337.1], [-396.3, 608.9],
+		[-376.3, 624], [-616, 593.6], [-672.3, 642]] },
+    "Pierre": {
+		icon: "resource/pierre.png",
+		positions: [
+		[-615.9, 316], [-641.5, 278.8], [-558.4, 257.4], [-535, 292], [-499.5, 241.1],
+		[-466.8, 283.1], [-407.1, 244.1], [-284, 402.8], [-254.6, 367.9], [-309.4, 479.1],
+		[-263, 466.6], [-289.1, 544.6], [-315.5, 567.9], [-298.6, 625.4], [-391.3, 726.9],
+		[-443.6, 697], [-468.6, 733.8], [-519, 714.9], [-564.9, 732.8], [-605.1, 680.3],
+		[-673.9, 684.1]] },
+    "Orange": {
+		icon: "resource/orange.png",
+		positions: [
+		[-650.1, 370.9], [-639.5, 372], [-607.3, 351.4], [-602.9, 343.5], [-588.6, 336.6],
+		[-559.6, 329.5], [-542.1, 324.8], [-515, 319.5], [-470.5, 321], [-461.4, 271.5],
+		[-410.8, 314], [-397.3, 310.1], [-310.9, 339.3], [-327.6, 373.9], [-324.9, 391.9],
+		[-295.4, 411.1], [-330.4, 420.9], [-333.8, 452.9]] },
     "Cèpe de Bordeaux": { 
         icon: "resource/cépes de bordeaux.png", 
         positions: [
-            [-615, 796.9], [-620, 778.1], [-610.6, 759.9], [-634.9, 745.5], 
-            [-650, 773.5], [-639, 800.6], [-543.5, 776.3], [-523.6, 777], 
-            [-524.3, 818.9], [-479.9, 780.8], [-464.3, 775.6], [-472.1, 801], 
-            [-477.3, 825.8], [-438.4, 789.3], [-410.5, 776.8], [-404.1, 794.1], 
-            [-415.8, 799.1]
-        ] 
-    },
+            [-615, 796.9], [-620, 778.1], [-610.6, 759.9], [-634.9, 745.5], [-650, 773.5],
+			[-639, 800.6], [-543.5, 776.3], [-523.6, 777], [-524.3, 818.9], [-479.9, 780.8],
+			[-464.3, 775.6], [-472.1, 801], [-477.3, 825.8], [-438.4, 789.3], [-410.5, 776.8],
+			[-404.1, 794.1], [-415.8, 799.1]] },
     "Truffe Noire": { 
         icon: "resource/truffes noires.png", 
         positions: [
-            [-358.1, 911.1], [-357.4, 926.1], [-340.4, 913.6], [-325.8, 920], 
-            [-342.1, 956.5], [-363.3, 961.8]
-        ] 
-    },
+            [-358.1, 911.1], [-357.4, 926.1], [-340.4, 913.6], [-325.8, 920], [-342.1, 956.5],
+			[-363.3, 961.8]] },
     "Lentins du Chêne": { 
         icon: "resource/Lentins du chene.png", 
         positions: [
-            [-772.3, 411.8], [-763.5, 397], [-736.8, 426.1], [-717.3, 446.8], 
-            [-705.8, 432.1], [-667.1, 462.5], [-666.6, 482.5], [-698.5, 491.8], 
-            [-698.3, 520.5], [-690.3, 542.6], [-686.4, 553.1], [-719.8, 546.6], 
-            [-724.8, 555.3], [-707.5, 575.9], [-714.9, 596.3]
-        ] 
-    },
+            [-772.3, 411.8], [-763.5, 397], [-736.8, 426.1], [-717.3, 446.8], [-705.8, 432.1],
+			[-667.1, 462.5], [-666.6, 482.5], [-698.5, 491.8], [-698.3, 520.5], [-690.3, 542.6],
+			[-686.4, 553.1], [-719.8, 546.6], [-724.8, 555.3], [-707.5, 575.9], [-714.9, 596.3]] },
     "Mousseron": { 
         icon: "resource/mousseron.png", 
         positions: [
-            [-676.3, 271.5], [-667.8, 264], [-686.3, 260.8], [-706.3, 253.5], 
-            [-632.8, 247.3], [-601.3, 229.5], [-577.5, 242.8], [-553.5, 237.3], 
-            [-491.8, 177.8], [-480.5, 192.5], [-459.8, 225.8], [-440.3, 230.3], 
-            [-420.3, 202.8], [-408.3, 178.8]
-        ] 
-    },
+            [-676.3, 271.5], [-667.8, 264], [-686.3, 260.8], [-706.3, 253.5], [-632.8, 247.3],
+			[-601.3, 229.5], [-577.5, 242.8], [-553.5, 237.3], [-491.8, 177.8], [-480.5, 192.5],
+			[-459.8, 225.8], [-440.3, 230.3], [-420.3, 202.8], [-408.3, 178.8]] },
     "Pleurote": { 
         icon: "resource/pleurote.png", 
         positions: [
-            [-220.5, 355.3], [-207.5, 352.6], [-145.3, 303], [-162.5, 296], 
-            [-190.5, 294.3], [-210.3, 301.8], [-221.3, 310], [-214, 421.1], 
-            [-196.1, 428.4], [-174.4, 399.8], [-212.6, 470.8], [-232.5, 522.3], 
-            [-205.8, 512.4], [-194.9, 526.1], [-169, 510.6], [-167.9, 533.9], 
-            [-186, 547.6], [-189.3, 583.9]
-        ] 
-    }
+            [-220.5, 355.3], [-207.5, 352.6], [-145.3, 303], [-162.5, 296], [-190.5, 294.3],
+			[-210.3, 301.8], [-221.3, 310], [-214, 421.1], [-196.1, 428.4], [-174.4, 399.8],
+			[-212.6, 470.8], [-232.5, 522.3], [-205.8, 512.4], [-194.9, 526.1], [-169, 510.6],
+			[-167.9, 533.9], [-186, 547.6], [-189.3, 583.9]] }
 };
 // 8. POISSONS
 const fishList = [
@@ -338,9 +380,3 @@ const birdList = [
     {name:"Tourterelle tigrine", bg:"condition/tourterelle_tigrine_lieu.png", cond:"condition/tourterelle_tigrine_meteo.png", heure:"condition/tourterelle_tigrine_heure.png"},
     {name:"Troglodyte", bg:"condition/troglodyte_lieu.png", cond:"condition/troglodyte_meteo.png", heure:"condition/troglodyte_heure.png"}
 ];
-
-
-
-
-
-
